@@ -1,0 +1,250 @@
+@import 'smart-grid'
+@import 'fonts'
+@import 'vars'
+@import 'libs'
+
++reset()
+
+body
+  font-family: $default-font
+  background-color: #ffffff
+
+.main
+	+wrapper()
+	max-width: 1400px
+	border-top: 8px solid $mcolor
+	border-bottom: 8px solid $mcolor
+	padding: 0
+
+.header
+	padding-top: 30px
+	+row-flex()
+	.header__logo
+		+col()
+		+col-4()
+		+col-lg-12()
+		position: relative
+		+row-flex()
+		+justify-content(center)
+		+align-items(center)
+		.header__logotip
+			+col()
+			+col-4()
+			+col-lg-2()
+			display: inline-block
+			text-align: center
+			background: url(../img/logo.png)
+			background-repeat: no-repeat
+			min-height: 80px
+			position: relative
+			.logo__span
+				position: absolute
+				left: 22%
+				top: 20%
+				text-shadow: -0.7px 0.8px 0 rgba(0, 0, 0, 0.52)
+				color: white
+				font-family: Amaranth
+				font-size: 29px
+				font-weight: 400
+		.header__logo__name
+			color: #a292b3
+			font-size: 39px
+			font-weight: 400
+			text-transform: uppercase
+			padding-bottom: 10px		
+	.menu
+		+col()
+		+col-8()
+		+col-lg-12()
+		+row-flex()
+		+align-items(center)
+		+justify-content(flex-end)
+		+justify-content-lg(center)
+		ul
+			+offset-left(1)
+			+offset-left-lg(0)
+		li
+			display: inline-block
+			color: $mcolor
+			font-size: 19px
+			font-weight: 400
+			margin-left: 60px
+			cursor: pointer
+			+col-xs-12()
+			text-align: center
+			.fa
+				margin-right: 5px
+	
+.owl-carousel
+	display: block
+	.content__img
+		background: url(../img/header.png)
+		background-size: cover
+		background-position: center
+		position: relative
+		min-height: 500px
+		margin-bottom: 40px
+		h3
+			opacity: 0.97
+			text-shadow: -3.9px 4.5px 0 rgba(130, 105, 157, 0.75)
+			color: white
+			font-size: 117px
+			font-weight: 400
+			line-height: 36px
+			text-align: center
+			padding-top: 220px
+			+col()
+			+col-12()
+		p
+			text-shadow: -0.7px 0.8px 0 rgba(0, 0, 0, 0.45)
+			color: white
+			font-family: SofiaProLight
+			font-size: 31px
+			font-weight: 400
+			line-height: 36px
+			text-align: center
+			padding-top: 50px
+			+col()
+			+col-12()
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev
+	position: absolute
+	top: 40%
+	display: block
+	background-color: #82699d
+	color: white
+	font-size: 25px
+	padding: 10px
+
+.owl-carousel .owl-dot
+	display: none
+
+.owl-carousel .owl-nav .owl-next
+	right: 0
+
+.content__discr
+	+col()
+	+col-12()
+	padding: 20px 30px
+	font-size: 23px
+	line-height: 36px
+	font-style: italic
+	text-align: center
+	border-top: 1px solid #bfbfbf
+	border-bottom: 1px solid #bfbfbf
+	p
+		color: #494848
+		span
+			color: #82699d
+			font-weight: 700
+
+.content__impact
+	padding-top: 30px
+	padding-bottom: 30px
+	+row-flex()
+	+justify-content(center)
+	.content__impact__img
+		+col()
+		+col-3()
+		+col-md-5()
+		img
+			border: 17px solid #dfdfdf
+			border-radius: 50%
+	.content__impact__text
+		+col()
+		+col-8()
+		+col-md-12()
+		margin-top: auto
+		h6
+			color: #505051
+			font-family: "Segoe UI"
+			font-size: 31px
+			font-weight: 700
+			line-height: 36px
+			padding-bottom: 25px
+		p
+			color: #838383
+			font-family: "Segoe UI"
+			font-size: 15px
+			font-weight: 400
+			line-height: 28px
+		span
+			display: block
+			text-align: right
+			color: #82699d
+			font-family: "Segoe UI"
+			font-size: 13px
+			font-style: italic
+			line-height: 36px
+			cursor: pointer
+			.fa
+				margin-left: 7px
+
+.content__sponsors
+	padding-top: 15px
+	color: black
+	font-family: "Segoe UI"
+	font-size: 23px
+	line-height: 36px
+	padding-bottom: 60px
+	h6
+		font-weight: 400
+	span
+		font-weight: 700
+		margin-right: 5px
+	ul li
+		display: inline-block
+		border: 1px solid rgba(0, 0, 0, 0.11)
+		background-color: #f5f5f5
+		width: 24%
+		text-align: center
+		padding: 20px 35px 10px 30px
+		img
+			min-height: 41px
+
+.footer
+	padding-top: 30px
+	padding-bottom: 15px
+	background-color: #e8e8e8
+	position: relative
+	width: 100%
+	padding-left: 40px
+	overflow: hidden
+	.footer__wrap
+		+col()
+		+col-12()
+		span
+			+col()
+			+col-3()
+			+col-xs-12()
+			color: #454242
+			font-family: "Segoe UI"
+			font-size: 15px
+			font-weight: 300
+			line-height: 36px
+		.footer__link
+			+col()
+			+col-xs-12()
+			vertical-align: bottom
+			display: inline-block
+			float: right
+			a
+				display: inline-block
+				text-decoration: none
+				margin-right: 15px
+				.fa
+					display: block
+					color: white
+					background-color: $mcolor
+					font-size: 20px
+					cursor: pointer
+					border-radius: 50%
+					width: 40px
+					height: 40px
+					text-align: center
+					padding-top: 10px
+
+
+@import 'media'
+		
+  
